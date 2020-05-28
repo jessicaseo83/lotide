@@ -5,30 +5,20 @@ const assertEqual = function(actual, expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   }
 };
-const trueFalseArray = function(array1, array2) {
- 
-
-  for (let i = 0; i < array1.length; i ++) {
-    let resultArray = [];
-    if (array1[i] === array2[i]) {
-      resultArray.push("true");
-    } else if (array1[i] !== array2[i]) {
-      resultArray.push("false");
-    }
-    return resultArray;
-  }
- 
-};
-
 const eqArrays = function(array1, array2) {
-  const result = trueFalseArray(array1, array2);
-  if (result.includes("false")) {
+  // if arrays' lengths are not same, no need to go further.
+  if (array1.length !== array2.length) {
     return false;
-  } else {
-    return true;
   }
+  // 두 어레이에서 같은 인덱스의 값이 같지 않으면, no need to go further.
+  let result = true;
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      result = false;
+    }
+  }
+  return result;
 };
-
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
@@ -65,4 +55,3 @@ assertEqual(eqObjects(cd, dc), true);
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false);
-console.log(typeof(cd2.d));
