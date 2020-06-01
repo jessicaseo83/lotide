@@ -34,13 +34,14 @@ const map = function(array, callback) {
   return results;
 }
 
-const results1 = map(words, word => word[0]);
-const stringLength = map(words, (word) => word.length);
-console.log(results1);
+module.exports = map;
+// const results1 = map(words, word => word[0]);
+// const stringLength = map(words, (word) => word.length);
+// console.log(results1);
 
 
-assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
-assertArraysEqual(stringLength, [6, 7, 2, 5, 3]);
+// assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
+// assertArraysEqual(stringLength, [6, 7, 2, 5, 3]);
  
 
 

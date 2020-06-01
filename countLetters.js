@@ -20,7 +20,8 @@ const countLetters = function(sentence) {
   }
   return result;
 };
-const result1 = countLetters("Lighthouse in the house");
-assertEqual(result1["l"], 1);
-assertEqual(result1["o"], 2);
-assertEqual(result1["h"], 4);
+// const result1 = countLetters("Lighthouse in the house");
+// assertEqual(result1["l"], 1);
+// assertEqual(result1["o"], 2);
+// assertEqual(result1["h"], 4);
+module.exports = countLetters;
