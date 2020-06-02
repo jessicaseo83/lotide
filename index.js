@@ -3,7 +3,8 @@ const tail = require('./tail');
 const middle = require('./middle');
 const countLetters = require('./countLetters');
 const countOnly = require('./countOnly');
-const eqArray = require('./eqArrays');
+const eqArrays = require('./eqArrays');
+const eqObjects = require('./eqObjects')
 const findKey = require('./findKey');
 const findKeyByValue = require('./findKeyByValue');
 const letterPositions = require('./letterPositions');
@@ -19,6 +20,8 @@ module.exports = {
   middle,
   countLetters,
   countOnly,
+  eqArrays,
+  eqObjects,
   findKey,
   findKeyByValue,
   letterPositions,
